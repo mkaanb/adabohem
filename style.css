@@ -75,6 +75,31 @@ section {
   color: white;
 }
 
+.language-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.language-toggle:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.language-icon {
+  width: 100%; /* Adjust size of the flag icon */
+  height: 100%;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 20%; /* Optional: make the icon circular */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  object-fit: cover;
+}
+
 #contact {
   background: #84245c;
   color: #e3d0d8;
