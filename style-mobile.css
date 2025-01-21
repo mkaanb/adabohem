@@ -1,0 +1,278 @@
+/* Universal Styles */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: linear-gradient(to bottom right, #e3d0d8, #b1799f);
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Header */
+header {
+  background-color: white;
+  padding: 10px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Header */
+.mobile-header {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Vertically center align items */
+  justify-content: space-between; /* Space out the menu toggle and logo */
+  position: relative; /* Ensure proper alignment inside the header */
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #84245c;
+  font-weight: bold;
+  cursor: pointer;
+  order: 1; /* Ensure the menu toggle is on the left */
+}
+
+.mobile-logo {
+  height: 50px;
+  order: 2; /* Ensure the logo is on the right */
+  margin-left: auto; /* Push the logo to the far right */
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #84245c;
+  font-weight: bold;
+}
+
+.mobile-menu.hidden {
+  display: none;
+}
+
+/* Section */
+section {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+#about {
+  background: #e3d0d8;
+  color: #84245c;
+  display: flex; /* Use Flexbox to align content */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+}
+
+#about p {
+  max-width: 90%;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px); /* Move down slightly for a smooth entry */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth animation */
+}
+
+#about p:first-child {
+  opacity: 1; /* Already visible */
+  transform: translateY(0); /* No movement */
+}
+
+/* When the paragraph becomes visible */
+#about p.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to its original position */
+}
+
+
+#products {
+  background: #b1799f;
+  color: white;
+}
+
+#products h2,
+#portfolio h2,
+#contact h2 {
+  margin-bottom: 20px;
+}
+
+.product-group {
+  margin-bottom: 30px;
+}
+
+.mobile-slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Ensure a consistent width for the slideshow */
+  margin: auto;
+  overflow: hidden; /* Hide overflowing content */
+  border-radius: 10px;
+  height: 225px; /* Fixed height for the slideshow container */
+}
+
+.mobile-slideshow img {
+  position: absolute; /* Allow precise placement of slides */
+  top: 0;
+  left: 100%; /* Start images off-screen to the right */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while filling the container */
+  opacity: 0; /* Make slides invisible by default */
+  transition: opacity 0.5s ease-in-out; /* Smooth transitions for opacity */
+  animation: none; /* Prevent unwanted animations by default */
+}
+
+.mobile-slideshow img.active {
+  left: 0; /* Position the active slide at the center */
+  opacity: 1; /* Make the active slide visible */
+  z-index: 2; /* Bring active slide to the front */
+}
+
+.mobile-slideshow img.prev {
+  left: -100%; /* Position the previous slide off-screen to the left */
+  opacity: 0; /* Ensure it fades out */
+  z-index: 1; /* Keep it below the active slide */
+}
+
+.mobile-slideshow img.next {
+  left: 100%; /* Position the next slide off-screen to the right */
+  opacity: 0; /* Hide the next slide */
+  z-index: 1; /* Keep it below the active slide */
+}
+
+/* Portfolio */
+#portfolio {
+  background: #7ebd10;
+  color: white;
+}
+
+.mobile-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.mobile-portfolio img {
+  width: 100%; /* Images scale within their grid cells */
+  max-width: 120px; /* Set a maximum width for logos */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images fit nicely */
+  transition: transform 0.3s;
+  border: 2.5px solid #84245c;
+  border-radius: 14px;
+  flex: 1 1 calc(16.6% - 2vw); /* Allow 6 items per row, accounting for gap */
+}
+
+/* Product Logos */
+.mobile-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.mobile-logos img {
+  width: 100%; /* Images scale within their grid cells */
+  max-width: 150px; /* Set a maximum width for logos */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  object-position: center; /* Ensures logos are centered within the container */
+  border: 2.5px solid #84245c;
+  border-radius: 14px;
+  transition: transform 0.3s;
+  flex: 1 1 calc(16.6% - 10vw); /* Allow 6 items per row, accounting for gap */
+}
+
+/* Contact Section */
+#contact {
+  background: #84245c;
+  color: #e3d0d8;
+  padding: 30px 15px;
+}
+
+.mobile-contact {
+  text-align: center;
+}
+
+.mobile-contact iframe {
+  width: 90%;
+  height: 300px;
+  margin: 20px 0;
+  border: 0;
+}
+
+.location h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.location p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #b1799f;
+  color: #e3d0d8;
+}
+
+.bahcivanlar-link {
+  color: #84245c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.bahcivanlar-link:hover {
+  color: #5a173b;
+  text-decoration: underline;
+}
+
+.designed {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 14px;
+}
+
+.designedname {
+  color: #84245c;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+/* Slide-in animation */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  to {
+    transform: translateX(0); /* Move to its final position */
+  }
+}
+
+/* Slide-out animation */
+@keyframes slide-out {
+  from {
+    transform: translateX(0); /* Start at the current position */
+  }
+  to {
+    transform: translateX(-100%); /* Move off-screen to the left */
+  }
+}

@@ -1,0 +1,377 @@
+/* Universal Styles */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: linear-gradient(to bottom right, #e3d0d8, #b1799f);
+  scroll-behavior: smooth;
+  cursor: url("images/arrowhead.png"), auto;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+header {
+  background-color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 50px;
+  font-size: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+  cursor: url("images/arrowhead2.png"), auto;
+}
+
+nav a:hover {
+  color: #84245c;
+}
+
+.logo {
+  height: 80px; /* Increased size for website logo */
+  align-items: left;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about {
+  background: #e3d0d8;
+  color: #84245c;
+  display: flex; /* Use Flexbox to align content */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+}
+
+#portfolio {
+  background: #7ebd10;
+  color: white;
+}
+
+#contact {
+  background: #84245c;
+  color: #e3d0d8;
+  padding: 40px 20px;
+  cursor: url("images/arrowhead3.png"), auto;
+}
+
+#about p {
+  max-width: 50%;
+  font-size: 18px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px); /* Move down slightly for a smooth entry */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth animation */
+}
+
+#about p:first-child {
+  opacity: 1; /* Already visible */
+  transform: translateY(0); /* No movement */
+}
+
+/* When the paragraph becomes visible */
+#about p.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to its original position */
+}
+
+.contact-locations {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.location {
+  flex: 1;
+  max-width: 45%; /* Ensures locations take up equal space */
+  min-width: 300px; /* Ensures responsiveness for smaller screens */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location:nth-child(1) {
+  align-items: flex-start; /* Align the first map to the left */
+}
+
+.location:nth-child(2) {
+  align-items: flex-end; /* Align the second map to the right */
+}
+
+.location iframe {
+  width: 100%;
+  height: 400px;
+  max-width: 600px;
+  border: 0;
+  margin-top: 10px;
+}
+
+#contact h3 {
+  text-align: center;
+}
+
+#contact p {
+  margin-bottom: 10px; /* Original margin restored */
+  text-align: left;
+  margin-top: -10px;
+}
+
+#products {
+  background: #b1799f;
+  color: white;
+}
+
+#products h2 {
+  margin-bottom: 30px;
+  text-decoration: underline; /* Underlined h2 */
+}
+
+.product-group {
+  margin-bottom: 50px;
+}
+
+.product-group h3 {
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 3rem; /* Largest for main sections */
+  margin-top: 10px; /* Reduced top margin */
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2.5rem; /* Slightly smaller for secondary sections */
+  margin-bottom: 20px;
+  text-decoration: underline; /* Underlined h2 */
+}
+
+h3 {
+  font-size: 2rem; /* Smaller for subsection titles */
+  margin-top: 10px; /* Reduced top margin */
+  margin-bottom: 15px; /* Added bottom margin */
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Fixed width for slideshow */
+  max-height: 600px; /* Maximum height for slideshow */
+  margin: -30px auto 70px auto; /* Adds more margin between slideshow and logos */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fallback background */
+}
+
+.slide {
+  display: none;
+}
+
+.slideshow-container img {
+  display: block;
+  max-width: 800px; /* Fixed width for slideshow */
+  max-height: 600px; /* Maximum height for slideshow */
+  width: 100%; /* Ensures the image fills the container width */
+  height: 100%; /* Ensures the image fills the container height */
+  object-fit: cover; /* Crops the image evenly from all sides */
+  object-position: center; /* Centers the image */
+  background-color: white; /* Adds a clean background */
+}
+
+/* Slideshow Navigation Buttons */
+.slideshow-container .prev,
+.slideshow-container .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.7); /* Transparent white */
+  color: #84245c; /* Matches the palette */
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%; /* Circular buttons */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease-in-out;
+  cursor: url("images/arrowhead2.png"), auto;
+}
+
+.slideshow-container .prev {
+  left: 15px;
+}
+
+.slideshow-container .next {
+  right: 15px;
+}
+
+.slideshow-container .prev:hover,
+.slideshow-container .next:hover {
+  background-color: #7ebd10; /* Matches the palette */
+  color: #fff; /* White arrows on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.slideshow-container .prev::before,
+.slideshow-container .next::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: solid #84245c;
+  border-width: 0 3px 3px 0;
+  transition: border-color 0.3s ease;
+}
+
+.slideshow-container .prev::before {
+  margin-left: 8px;
+}
+
+.slideshow-container .next::before {
+  margin-right: 8px;
+}
+
+.slideshow-container .prev::before {
+  transform: rotate(135deg); /* Left arrow */
+}
+
+.slideshow-container .next::before {
+  transform: rotate(-45deg); /* Right arrow */
+}
+
+.slideshow-container .prev:hover::before,
+.slideshow-container .next:hover::before {
+  border-color: white; /* Arrow turns white on hover */
+}
+
+.product-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10vw; /* Dynamic gap based on the viewport width */
+  justify-content: center; /* Center-align rows even if they have fewer items */
+}
+
+.product-logos img {
+  width: 100%; /* Images scale within their grid cells */
+  max-width: 180px; /* Set a maximum width for logos */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  object-position: center; /* Ensures logos are centered within the container */
+  border: 2.5px solid #84245c;
+  border-radius: 14px;
+  transition: transform 0.3s;
+  flex: 1 1 calc(16.6% - 10vw); /* Allow 6 items per row, accounting for gap */
+}
+
+.product-logos img:hover {
+  transform: scale(1.05);
+  transition: transform 0.8s ease;
+}
+
+.portfolio-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw; /* Dynamic gap based on the viewport width */
+  justify-content: center; /* Center-align rows even if they have fewer items */
+}
+
+.portfolio-logos img {
+  width: 100%; /* Images scale within their grid cells */
+  max-width: 150px; /* Set a maximum width for logos */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images fit nicely */
+  transition: transform 0.3s;
+  border: 2.5px solid #84245c;
+  border-radius: 14px;
+  flex: 1 1 calc(16.6% - 2vw); /* Allow 6 items per row, accounting for gap */
+}
+
+.portfolio-logos img:hover {
+  transform: scale(1.05); /* Add a slight zoom effect on hover */
+  transition: transform 0.8s ease;
+}
+
+/* Media Queries for Finer Control */
+@media (max-width: 768px) {
+  .portfolio-logos {
+    gap: 4vw; /* Increase gap for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-logos img {
+    max-width: 100px; /* Smaller logos on very small screens */
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #b1799f;
+  color: #e3d0d8;
+  margin-top: 20px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-slide] {
+  opacity: 0; /* Start as invisible */
+  transform: translateX(100px); /* Adjust based on the slide direction */
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.bahcivanlar-link {
+  color: #84245c; /* Set the link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make it stand out */
+  transition: color 0.3s ease; /* Smooth transition for hover */
+  cursor: url("images/arrowhead2.png"), auto;
+}
+
+.bahcivanlar-link:hover {
+  color: #5a173b; /* Slightly darker shade on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.designed {
+  text-align: right;
+}
+
+.designedname {
+  color: #84245c;
+  font-weight: bold;
+}
