@@ -107,6 +107,29 @@ section {
   cursor: url("images/arrowhead3.png"), auto;
 }
 
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: -20px;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.insta-icon {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.insta-icon img {
+  display: block;
+}
+
 #about p {
   max-width: 50%;
   font-size: 18px;
@@ -144,6 +167,7 @@ section {
   align-items: center;
 }
 
+
 .location:nth-child(1) {
   align-items: flex-start; /* Align the first map to the left */
 }
@@ -169,6 +193,11 @@ section {
   text-align: left;
   margin-top: -10px;
 }
+
+#contact a {
+  text-decoration: underline;
+  color: #e3d0d8;
+  }
 
 #products {
   background: #b1799f;
@@ -307,20 +336,20 @@ h3 {
 .product-logos {
   display: flex;
   flex-wrap: wrap;
-  gap: 5vw; /* Dynamic gap based on the viewport width */
+  gap: 2vw; /* Dynamic gap based on the viewport width */
   justify-content: center; /* Center-align rows even if they have fewer items */
 }
 
 .product-logos img {
   width: 100%; /* Images scale within their grid cells */
-  max-width: 180px; /* Set a maximum width for logos */
+  max-width: 160px; /* Set a maximum width for logos */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover;
   object-position: center; /* Ensures logos are centered within the container */
   border: 2.5px solid #84245c;
   border-radius: 14px;
   transition: transform 0.3s;
-  flex: 1 1 calc(16.6% - 10vw); /* Allow 6 items per row, accounting for gap */
+  flex: 1 1 calc(16.6% - 2w); /* Allow 6 items per row, accounting for gap */
 }
 
 .product-logos img:hover {

@@ -303,13 +303,13 @@ document.addEventListener("DOMContentLoaded", () => {
     locations[0].querySelector("p").innerHTML = `
       <strong>${translations[language].contact.location1.phone}</strong> 0 (539) 101 11 99<br />
       <strong>${translations[language].contact.location1.address}</strong> Gazeteci Hasan Tahsin Cd 83/B, Lefkoşa<br />
-      <strong>${translations[language].contact.location1.email}</strong> info@bohem.com
+      <strong>${translations[language].contact.location1.email}</strong> <a href="mailto:info@bohem.com">info@bohem.com</a>
     `;
     locations[1].querySelector("h3").textContent = translations[language].contact.location2.title;
     locations[1].querySelector("p").innerHTML = `
       <strong>${translations[language].contact.location2.phone}</strong> 0 (539) 100 55 50<br />
       <strong>${translations[language].contact.location2.address}</strong> Naci Talat Cd 3, Girne<br />
-      <strong>${translations[language].contact.location2.email}</strong> info@bohem.com
+      <strong>${translations[language].contact.location2.email} </strong> <a href="mailto:info@bohem.com">info@bohem.com</a>
     `;
 
     // Footer

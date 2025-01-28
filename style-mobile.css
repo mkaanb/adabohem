@@ -58,6 +58,25 @@ header {
   font-weight: bold;
 }
 
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-top: -10px;
+  transition: transform 0.3s ease;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-bottom: -10px;
+}
+
+.insta-icon {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.insta-icon img {
+  display: block;
+}
+
 .mobile-menu.hidden {
   display: none;
 }
@@ -229,14 +248,20 @@ section {
   padding: 30px 15px;
 }
 
+#contact a {
+  text-decoration: underline;
+  color: #e3d0d8;
+  }
+
 .mobile-contact {
   text-align: center;
+
 }
 
 .mobile-contact iframe {
   width: 90%;
   height: 300px;
-  margin: 20px 0;
+  margin: 20px 0 60px;
   border: 0;
 }
 
