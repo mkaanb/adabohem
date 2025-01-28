@@ -307,7 +307,7 @@ h3 {
 .product-logos {
   display: flex;
   flex-wrap: wrap;
-  gap: 10vw; /* Dynamic gap based on the viewport width */
+  gap: 5vw; /* Dynamic gap based on the viewport width */
   justify-content: center; /* Center-align rows even if they have fewer items */
 }
 
