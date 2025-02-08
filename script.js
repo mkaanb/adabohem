@@ -490,3 +490,50 @@ if (navigator.language.startsWith('tr')) {
   });
   
   
+// Ensure all scripts are loaded before hiding the spinner
+window.onload = function() {
+  let loader = document.getElementById("loading-screen");
+  loader.style.opacity = "0";  // Smooth fade-out effect
+  setTimeout(() => {
+      loader.style.display = "none"; // Hide completely
+  }, 600); // Wait for fade-out animation
+};
+
+
+// Function to check if the page exists
+document.addEventListener("DOMContentLoaded", function() {
+  fetch(window.location.href, { method: 'HEAD' })
+      .then(response => {
+          if (!response.ok) {
+              show404Screen();
+          }
+      })
+      .catch(() => show404Screen()); // If fetch fails, assume it's broken
+    });
+
+function show404Screen() {
+  let errorScreen = document.getElementById("error-screen");
+  // If the 404 screen doesn't exist in the DOM, create it
+  if (!errorScreen) {
+      errorScreen = document.createElement("div");
+      errorScreen.id = "error-screen";
+      errorScreen.innerHTML = `
+          <h2>Oops! Seems like the wrong way!</h2>
+          <p>The page you're looking for doesn't exist.</p>
+          <br><br>
+          <button onclick="goHome()">AdaBohem</button>
+          <br><br>
+          <h2>Sanıyoruz ki yanlış geldiniz!</h2>
+          <p>Böyle bir sayfa bulunamadı!</p>
+      `;
+      document.body.appendChild(errorScreen);
+  }
+
+  // Show the 404 screen
+  errorScreen.style.display = "flex";
+}
+
+// Redirect to Homepage
+function goHome() {
+  window.location.href = "/";
+}
