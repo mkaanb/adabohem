@@ -183,10 +183,16 @@ document.addEventListener("DOMContentLoaded", () => {
       products: {
         heading: "Products & Services",
         group1: "Printing & Packaging Group",
-        group2: "Hookah Group"
+        group2: "Hookah Group",
+        text1: "At AdaBohem, we take pride in offering a diverse range of high-quality products and services tailored to meet the needs of businesses and individuals alike. With a strong presence in printing, packaging, labeling, corporate promotion, and hookah product distribution, we ensure reliable solutions backed by years of experience and expertise.",
+        text2: "With years of experience in importing goods from Turkey, we manage quality control, logistics, and customs clearance for businesses seeking seamless supply chain solutions. Our expertise ensures that businesses receive their products on time, hassle-free.",
+        text3: "From custom packaging solutions to high-quality printed materials, we support businesses in creating impactful branding and packaging that stands out. Whether it's food packaging, labels, promotional materials, or customized prints, our advanced printing technology guarantees precision, durability, and aesthetic appeal.",
+        text4: "We are a leading distributor of premium hookah products, accessories, and tobacco brands in Cyprus. Our carefully curated selection includes high-quality hookahs, hoses, bowls, coals, and tobacco sourced from reputable manufacturers. As an importer, we also assist businesses in procuring and transporting hookah products seamlessly."
       },
       portfolio: {
-        heading: "Portfolio"
+        heading: "Portfolio",
+        text1: "Over the years, AdaBohem has been an integral part of our customers' success by providing essential products and services that support their business growth. Whether through custom-printed packaging, high-quality labels, promotional merchandise, or premium hookah products, we have helped countless businesses bring their ideas to life.",
+        text2: "We are proud to have collaborated with leading brands, businesses, and entrepreneurs, ensuring they receive top-tier solutions tailored to their needs. Our commitment to quality, reliability, and customer satisfaction continues to set us apart in the industry."
       },
       contact: {
         heading: "Contact",
@@ -233,10 +239,16 @@ document.addEventListener("DOMContentLoaded", () => {
       products: {
         heading: "Ürün ve Hizmetler",
         group1: "Matbaa & Ambalaj Grubu",
-        group2: "Nargile Grubu"
+        group2: "Nargile Grubu",
+        text1: "AdaBohem olarak, işletmelerin ve bireylerin ihtiyaçlarına yönelik baskı, ambalaj, etiketleme, kurumsal promosyon ve nargile ürünleri dağıtımı alanlarında yüksek kaliteli çözümler sunmaktan gurur duyuyoruz. Yılların getirdiği deneyim ve uzmanlık ile müşterilerimize güvenilir ve etkili hizmetler sağlıyoruz.",
+        text2: "Türkiye’den yapılan ithalat süreçlerinde geniş deneyime sahibiz. Kalite kontrol, lojistik ve gümrükleme hizmetleri ile işletmelerin tedarik süreçlerini kolaylaştırıyoruz. Ürünlerinizin güvenli ve zamanında teslim edilmesine destek oluyoruz.",
+        text3: "Özgün tasarımlarınızla fark yaratmanızı sağlayan özel ambalaj çözümleri ve yüksek kaliteli baskı hizmetleri sunuyoruz. Gıda ambalajları, etiketler, promosyon materyalleri ve özel baskılar gibi geniş bir ürün yelpazesinde en son teknolojiyle kaliteli, dayanıklı ve estetik baskılar sağlıyoruz.",
+        text4: "Kıbrıs'ta nargile ürünleri, aksesuarları ve tütün markalarının öncü distribütörlerinden biriyiz. Özenle seçilmiş nargileler, marpuçlar, lüleler, kömürler ve tütün ürünleri gibi geniş ürün yelpazemizle hem perakende hem de toptan satış çözümleri sunuyoruz. Aynı zamanda, ithalatçı olarak işletmelerin nargile ürünlerini kolay ve güvenilir bir şekilde temin etmelerine yardımcı oluyoruz."
       },
       portfolio: {
-        heading: "Portföy"
+        heading: "Portföy",
+        text1: "Yıllar içinde, müşterilerimizin büyüme yolculuğunda önemli bir rol oynayarak ihtiyaç duydukları baskı, ambalaj, etiketleme, promosyon ürünleri ve nargile ekipmanları konusunda destek sağladık.",
+        text2: "AdaBohem olarak, öncü markalar, işletmeler ve girişimcilerle iş birliği yaparak onlara özel çözümler sunduk. Kalite, güvenilirlik ve müşteri memnuniyetine olan bağlılığımız, sektörde bizi farklı kılan en önemli özelliklerimizden biri olmaya devam ediyor."
       },
       contact: {
         heading: "İletişim",
@@ -272,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("nav a[href='#contact']").textContent = translations[language].navigation.contact;
 
     // About Section
-    document.querySelector("#about h2").textContent = translations[language].about.heading;
+    document.querySelector("#about h1").textContent = translations[language].about.heading;
     const aboutParagraphs = document.querySelectorAll("#about p");
     aboutParagraphs[0].innerHTML = `
     <a href="http://www.bahcivanlar.com.tr" target="_blank" class="bahcivanlar-link">
@@ -288,16 +300,29 @@ document.addEventListener("DOMContentLoaded", () => {
     aboutParagraphs[3].textContent = translations[language].about.text4;
 
     // Products Section
-    document.querySelector("#products h2").textContent = translations[language].products.heading;
-    const productGroups = document.querySelectorAll("#products h3");
+    document.querySelector("#products h1").textContent = translations[language].products.heading;
+    const productGroups = document.querySelectorAll("#products h2");
     productGroups[0].textContent = translations[language].products.group1;
     productGroups[1].textContent = translations[language].products.group2;
 
+    // Products P Sections
+    const productParagraphs = document.querySelectorAll("#products p");
+    productParagraphs[0].textContent = translations[language].products.text1;
+    productParagraphs[1].textContent = translations[language].products.text2;
+    productParagraphs[2].textContent = translations[language].products.text3;
+    productParagraphs[3].textContent = translations[language].products.text4;
+
+    // Portfolio P Sections
+    const portfolioParagraphs = document.querySelectorAll("#portfolio p");
+    portfolioParagraphs[0].textContent = translations[language].portfolio.text1;
+    portfolioParagraphs[1].textContent = translations[language].portfolio.text2;
+
+
     // Portfolio Section
-    document.querySelector("#portfolio h2").textContent = translations[language].portfolio.heading;
+    document.querySelector("#portfolio h1").textContent = translations[language].portfolio.heading;
 
     // Contact Section
-    document.querySelector("#contact h2").textContent = translations[language].contact.heading;
+    document.querySelector("#contact h1").textContent = translations[language].contact.heading;
     const locations = document.querySelectorAll("#contact .location");
     locations[0].querySelector("h3").textContent = translations[language].contact.location1.title;
     locations[0].querySelector("p").innerHTML = `
@@ -337,6 +362,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Save language preference
     localStorage.setItem("language", language);
     addUnderlineEffect();
+    
+    if (language === 'tr') {
+      metaDesc.setAttribute("content", "Kıbrıs’ta güvenilir baskı, ambalaj, etiket baskı, rulo etiket ve ithalat çözümleri sağlayıcısı. Ayrıca nargile, tütün ve aksesuar tedariki ile kalite ve verimlilik sunulmaktadır.");
+    } else {
+      metaDesc.setAttribute("content", "Trusted provider of printing, packaging, label printing, roll labels, and business import solutions in Cyprus. Also supplying shisha, tobacco, and hookah accessories with a commitment to quality and efficiency.");
+    }
+    if (language === 'tr') {
+      document.title = "AdaBohem | Güvenilir İthalat & Nargile Tedarikçiniz - KKTC";
+    } else {
+      document.title = "AdaBohem | Your Trusted Import & Hookah Supplier in Cyprus";
+    }
   };
 
   // Detect and apply default language
@@ -407,5 +443,50 @@ function updateActiveLink() {
 }
 
 window.addEventListener("scroll", debounce(updateActiveLink));
+  
+function updateTitle() {
+if (navigator.language.startsWith('tr')) {
+    document.title = "AdaBohem | Güvenilir İthalat & Nargile Tedarikçiniz - KKTC";
+  } else {
+    document.title = "AdaBohem | Your Trusted Import & Hookah Supplier in Cyprus";
+  }
+}
+  function updateMetaDescription() {
+    let metaDesc = document.getElementById("metaDesc");
+    
+    if (navigator.language.startsWith('tr')) {
+      metaDesc.setAttribute("content", "Kıbrıs’ta güvenilir baskı, ambalaj, etiket baskı, rulo etiket ve ithalat çözümleri sağlayıcısı. Ayrıca nargile, tütün ve aksesuar tedariki ile kalite ve verimlilik sunulmaktadır.");
+    } else {
+      metaDesc.setAttribute("content", "Trusted provider of printing, packaging, label printing, roll labels, and business import solutions in Cyprus. Also supplying shisha, tobacco, and hookah accessories with a commitment to quality and efficiency.");
+    }
+  }
+  updateTitle();
+  updateMetaDescription();
 
-
+  function updateHTMLVersion() {
+    console.log('Checking screen size...');
+  
+    const isMobile = window.innerWidth <= 768;
+    const currentPage = window.location.pathname;
+  
+    // Handle cases where index.html is not explicitly in the URL (e.g., "/")
+    const isIndex = currentPage === "/" || currentPage.includes("index.html");
+  
+    if (isMobile && !currentPage.includes("mobile.html")) {
+      window.location.href = "mobile.html"; 
+    } else if (!isMobile && !isIndex) {
+      window.location.href = "index.html";
+    }
+  }
+  
+  // Run on load
+  window.addEventListener("load", updateHTMLVersion);
+  
+  // Run on resize with debounce to prevent excessive redirections
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(updateHTMLVersion, 300);
+  });
+  
+  

@@ -32,11 +32,14 @@ header {
 .menu-toggle {
   background: none;
   border: none;
-  font-size: 30px;
-  color: #84245c;
-  font-weight: bold;
   cursor: pointer;
   order: 1; /* Ensure the menu toggle is on the left */
+}
+
+.hamb {
+  height: 32px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .mobile-logo {
@@ -116,6 +119,9 @@ section {
   transform: translateY(0); /* Move to its original position */
 }
 
+h1 {
+  text-decoration: underline;
+}
 
 #products {
   background: #b1799f;
@@ -147,10 +153,37 @@ section {
   object-fit: cover;
 }
 
-#products h2,
-#portfolio h2,
-#contact h2 {
+#products h1,
+#portfolio h1,
+#contact h1 {
   margin-bottom: 20px;
+}
+
+#products p {
+max-width: 80%;
+padding: 10%;
+padding-top: 5%;
+padding-bottom: 15%;
+}
+
+.product-group p {
+  padding-top: 1% !important;
+  padding-bottom: 1% !important;
+}
+
+#portfolio p {
+  max-width: 80%;
+  padding: 10%;
+  padding-top: 0%;
+  padding-bottom: 3%;
+  }
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 .product-group {
@@ -165,6 +198,7 @@ section {
   overflow: hidden; /* Hide overflowing content */
   border-radius: 10px;
   height: 225px; /* Fixed height for the slideshow container */
+  margin-bottom: 60px;
 }
 
 .mobile-slideshow img {

@@ -73,6 +73,7 @@ section {
 #portfolio {
   background: #7ebd10;
   color: white;
+  display: grid;
 }
 
 .language-toggle {
@@ -167,7 +168,6 @@ section {
   align-items: center;
 }
 
-
 .location:nth-child(1) {
   align-items: flex-start; /* Align the first map to the left */
 }
@@ -197,23 +197,28 @@ section {
 #contact a {
   text-decoration: underline;
   color: #e3d0d8;
-  }
+}
 
 #products {
   background: #b1799f;
   color: white;
+  display: grid;
 }
 
-#products h2 {
+#products h1 {
   margin-bottom: 30px;
-  text-decoration: underline; /* Underlined h2 */
 }
 
-.product-group {
+#portfolio h1 {
   margin-bottom: 50px;
 }
 
-.product-group h3 {
+.product-group {
+  display: grid;
+  margin-bottom: 50px;
+}
+
+.product-group h2 {
   margin-bottom: 50px;
 }
 
@@ -221,12 +226,13 @@ h1 {
   font-size: 3rem; /* Largest for main sections */
   margin-top: 10px; /* Reduced top margin */
   margin-bottom: 20px;
+  text-decoration: underline;
 }
 
 h2 {
-  font-size: 2.5rem; /* Slightly smaller for secondary sections */
-  margin-bottom: 20px;
-  text-decoration: underline; /* Underlined h2 */
+  font-size: 2rem; /* Smaller for subsection titles */
+  margin-top: 10px; /* Reduced top margin */
+  margin-bottom: 15px; /* Added bottom margin */
 }
 
 h3 {
@@ -235,12 +241,37 @@ h3 {
   margin-bottom: 15px; /* Added bottom margin */
 }
 
+#products p {
+  max-width: 60%;
+  font-size: 18px;
+  margin-bottom: 100px;
+  margin-top: 0px;
+  transform: translateY(10px); /* Move down slightly for a smooth entry */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth animation */
+  justify-self: center;
+}
+
+.product-group p {
+  margin-bottom: 60px !important;
+  margin-top: -30px !important;
+}
+
+#portfolio p {
+  max-width: 60%;
+  font-size: 18px;
+  margin-bottom: 60px;
+  margin-top: -30px;
+  transform: translateY(10px); /* Move down slightly for a smooth entry */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth animation */
+  justify-self: center;
+}
+
 .slideshow-container {
   position: relative;
   width: 100%;
   max-width: 800px; /* Fixed width for slideshow */
   max-height: 600px; /* Maximum height for slideshow */
-  margin: -30px auto 70px auto; /* Adds more margin between slideshow and logos */
+  margin: 0px auto 30px auto; /* Adds more margin between slideshow and logos */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
