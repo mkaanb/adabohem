@@ -128,6 +128,41 @@ h1 {
   color: white;
 }
 
+.printing-group {
+  margin: 0px;
+  margin-top: -30px;
+}
+
+.printing-group h3 {
+  font-size: 1.6rem; /* Smaller for subsection titles */
+  margin-bottom: -10px; /* Added bottom margin */
+}
+
+.list-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.column li {
+  margin: 12px;
+  text-align: center;
+}
+
+.single-column {
+  list-style-type: none;
+  padding: 0;
+}
+
+.single-column li {
+  margin: 12px 0;
+}
+
 .language-toggle {
   background: none;
   border: none;

@@ -241,6 +241,41 @@ h3 {
   margin-bottom: 15px; /* Added bottom margin */
 }
 
+.printing-group {
+  margin: 0px;
+  margin-top: -60px;
+}
+
+.printing-group h3 {
+  font-size: 1.6rem; /* Smaller for subsection titles */
+  margin-bottom: 5px; /* Added bottom margin */
+}
+
+.list-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  list-style-type: none;
+  padding: 0;
+  width: 80%;
+}
+
+.column li {
+  margin: 5px;
+  text-align: center;
+}
+
+.single-column {
+  list-style-type: none;
+  padding: 0;
+}
+
+.single-column li {
+  margin: 5px 0;
+}
+
 #products p {
   max-width: 60%;
   font-size: 18px;

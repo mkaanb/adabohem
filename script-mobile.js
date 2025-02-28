@@ -187,6 +187,24 @@ document.addEventListener("DOMContentLoaded", () => {
         text3: "From custom packaging solutions to high-quality printed materials, we support businesses in creating impactful branding and packaging that stands out. Whether it's food packaging, labels, promotional materials, or customized prints, our advanced printing technology guarantees precision, durability, and aesthetic appeal.",
         text4: "We are a leading distributor of premium hookah products, accessories, and tobacco brands in Cyprus. Our carefully curated selection includes high-quality hookahs, hoses, bowls, coals, and tobacco sourced from reputable manufacturers. As an importer, we also assist businesses in procuring and transporting hookah products seamlessly."
       },
+      printinggroup: {
+        heading1: "Offset Print Group",
+        heading2: "Labeling Group",
+        list1: "Magazine / Books / Bulletin / Notebook",
+        list2: "Notepad / Folder / File",
+        list3: "Cardboard Bag / Cardboard Box",
+        list4: "Agenda / Calendar",
+        list5: "Promotional Products <br>(Pen / Tech Products / Lighter etc.)",
+        list6: "Match / Cigar Match",
+        list7: "Food Packaging / Paper Tableware",
+        list8: "Collection / Payment Receipts",
+        list9: "Letterhead Forms / Service Forms",
+        list10: "Currency / Scale Receipt",
+        list11: "Work Acceptance Cards / Contracts / Payrolls",
+        list12: "Roll Glossy / Thermal / PP / PE / Metalized Label",
+        list13: "Thermal Roll / POS Machine Roll / Calculator Roll",
+        list14: "In Mould Label (IML)"
+      },
       portfolio: {
         heading: "Portfolio",
         text1: "Over the years, AdaBohem has been an integral part of our customers' success by providing essential products and services that support their business growth. Whether through custom-printed packaging, high-quality labels, promotional merchandise, or premium hookah products, we have helped countless businesses bring their ideas to life.",
@@ -242,6 +260,24 @@ document.addEventListener("DOMContentLoaded", () => {
         text2: "Türkiye’den yapılan ithalat süreçlerinde geniş deneyime sahibiz. Kalite kontrol, lojistik ve gümrükleme hizmetleri ile işletmelerin tedarik süreçlerini kolaylaştırıyoruz. Ürünlerinizin güvenli ve zamanında teslim edilmesine destek oluyoruz.",
         text3: "Özgün tasarımlarınızla fark yaratmanızı sağlayan özel ambalaj çözümleri ve yüksek kaliteli baskı hizmetleri sunuyoruz. Gıda ambalajları, etiketler, promosyon materyalleri ve özel baskılar gibi geniş bir ürün yelpazesinde en son teknolojiyle kaliteli, dayanıklı ve estetik baskılar sağlıyoruz.",
         text4: "Kıbrıs'ta nargile ürünleri, aksesuarları ve tütün markalarının öncü distribütörlerinden biriyiz. Özenle seçilmiş nargileler, marpuçlar, lüleler, kömürler ve tütün ürünleri gibi geniş ürün yelpazemizle hem perakende hem de toptan satış çözümleri sunuyoruz. Aynı zamanda, ithalatçı olarak işletmelerin nargile ürünlerini kolay ve güvenilir bir şekilde temin etmelerine yardımcı oluyoruz."
+      },
+      printinggroup: {
+        heading1: "Ofset Baskı Grubu",
+        heading2: "Etiket Baskı Grubu",
+        list1: "Dergi / Kitap / Bülten / Defter",
+        list2: "Bloknot / Dosya / Klasör",
+        list3: "Karton Çanta / Karton Kutu",
+        list4: "Ajanda / Takvim",
+        list5: "Promosyon Ürünleri <br>(Kalem / Teknolojik Ürünler / Çakmak vb.)",
+        list6: "Kibrit / Puro Kibriti",
+        list7: "Gıda Ambalajları / Kağıt Sofra Ürünleri",
+        list8: "Tahsilat / Tediye Makbuzları",
+        list9: "Antetli Formlar / Servis Formları",
+        list10: "Döviz / Kantar Fişi",
+        list11: "İş Kabul Kartları / Sözleşmeler / Maaş Bordroları",
+        list12: "Rulo Kuşe / Termal / PP / PE / Metalize Etiket",
+        list13: "Termal Bobin / POS Cihazı Bobini / Hesap Makinesi Bobini",
+        list14: "In Mould Etiket (IML)"
       },
       portfolio: {
         heading: "Portföy",
@@ -309,6 +345,18 @@ document.addEventListener("DOMContentLoaded", () => {
     productParagraphs[1].textContent = translations[language].products.text2;
     productParagraphs[2].textContent = translations[language].products.text3;
     productParagraphs[3].textContent = translations[language].products.text4;
+
+    const productLists = document.querySelectorAll(".printing-group li");
+    productLists.forEach((item, index) => {
+        const listKey = `list${index + 1}`;
+        if (translations[language].printinggroup[listKey]) {
+            item.innerHTML = translations[language].printinggroup[listKey];
+        }
+    });
+
+    const productHeaders = document.querySelectorAll(".printing-group h3");
+    productHeaders[0].textContent = translations[language].printinggroup.heading1;
+    productHeaders[1].textContent = translations[language].printinggroup.heading2;
 
     // Portfolio P Sections
     const portfolioParagraphs = document.querySelectorAll("#portfolio p");
