@@ -95,34 +95,41 @@ navLinks.forEach((navLink) => {
   // Adjust scroll position for sticky header
   document.querySelectorAll("nav a").forEach((navLink) => {
     navLink.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent default anchor behavior
-
-      const targetId = this.getAttribute("href").substring(1); // Get target section ID
-      const targetElement = document.getElementById(targetId);
-      const headerHeight = document.querySelector("header").offsetHeight; // Get sticky header height
-
-      if (targetElement) {
-        const elementPosition = targetElement.offsetTop; // Get the element's top position
-        const offsetPosition = elementPosition - headerHeight; // Adjust for header height
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth", // Smooth scrolling
-        });
+      const href = this.getAttribute("href");
+      // Check if the href is an internal link (starts with #)
+      if (href.startsWith("#")) {
+        event.preventDefault(); // Prevent default anchor behavior
+        const targetId = href.substring(1); // Get target section ID
+        const targetElement = document.getElementById(targetId);
+        const headerHeight = document.querySelector("header").offsetHeight; // Get sticky header height
+  
+        if (targetElement) {
+          const elementPosition = targetElement.offsetTop; // Get the element's top position
+          const offsetPosition = elementPosition - headerHeight; // Adjust for header height
+  
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth", // Smooth scrolling
+          });
+        }
       }
     });
   });
+  
 
   // Smooth scroll to section on click
   navLink.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent default anchor behavior
-    const targetId = navLink.getAttribute("href").substring(1); // Get target section ID
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      window.scrollTo({
+    const href = this.getAttribute("href");
+    if (href.startsWith("#")) {
+      e.preventDefault(); // Prevent default anchor behavior
+      const targetId = navLink.getAttribute("href").substring(1); // Get target section ID
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        window.scrollTo({
         top: targetSection.offsetTop,
         behavior: "smooth", // Smooth scrolling effect
-      });
+        });
+      }
     }
   });
 });
@@ -167,7 +174,8 @@ document.addEventListener("DOMContentLoaded", () => {
         about: "About Us",
         products: "Products & Services",
         portfolio: "Portfolio",
-        contact: "Contact"
+        contact: "Contact",
+        catalogue: "Catalogue"
       },
       about: {
         heading: "About Us",
@@ -241,7 +249,8 @@ document.addEventListener("DOMContentLoaded", () => {
         about: "Hakkımızda",
         products: "Ürün ve Hizmetler",
         portfolio: "Portföy",
-        contact: "İletişim"
+        contact: "İletişim",
+        catalogue: "Katalog"
       },
       about: {
         heading: "Hakkımızda",
@@ -318,6 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("nav a[href='#products']").textContent = translations[language].navigation.products;
     document.querySelector("nav a[href='#portfolio']").textContent = translations[language].navigation.portfolio;
     document.querySelector("nav a[href='#contact']").textContent = translations[language].navigation.contact;
+    document.querySelector("nav a[href='AdaBohem Katalog V4/cat-index.html']").textContent = translations[language].navigation.catalogue;
 
     // About Section
     document.querySelector("#about h1").textContent = translations[language].about.heading;

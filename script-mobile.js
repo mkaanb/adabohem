@@ -108,6 +108,9 @@ const headerHeight = stickyHeader.offsetHeight;
 // Add smooth scroll to navigation links
 navLinks.forEach((navLink) => {
   navLink.addEventListener("click", (e) => {
+    const href = this.getAttribute("href");
+    // Check if the href is an internal link (starts with #)
+    if (href.startsWith("#")) {
     e.preventDefault(); // Prevent default link behavior
 
     // Get the target section
@@ -118,8 +121,7 @@ navLinks.forEach((navLink) => {
       // Calculate scroll position
       const targetPosition =
         targetElement.getBoundingClientRect().top +
-        window.scrollY -
-        200;
+        window.scrollY -200;
 
       // Smooth scroll to the adjusted position
       window.scrollTo({
@@ -127,7 +129,7 @@ navLinks.forEach((navLink) => {
         behavior: "smooth",
       });
     }
-
+  }
     // Hide the mobile menu after clicking a link
     if (!mobileMenu.classList.contains("hidden")) {
       mobileMenu.classList.add("hidden");
@@ -165,7 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
         about: "About Us",
         products: "Products & Services",
         portfolio: "Portfolio",
-        contact: "Contact"
+        contact: "Contact",
+        catalogue: "Catalogue"
       },
       about: {
         heading: "About Us",
@@ -239,7 +242,8 @@ document.addEventListener("DOMContentLoaded", () => {
         about: "Hakkımızda",
         products: "Ürün ve Hizmetler",
         portfolio: "Portföy",
-        contact: "İletişim"
+        contact: "İletişim",
+        catalogue: "Katalog"
       },
       about: {
         heading: "Hakkımızda",
@@ -316,6 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("nav a[href='#products']").textContent = translations[language].navigation.products;
     document.querySelector("nav a[href='#portfolio']").textContent = translations[language].navigation.portfolio;
     document.querySelector("nav a[href='#contact']").textContent = translations[language].navigation.contact;
+    document.querySelector("nav a[href='AdaBohem Katalog V4/cat-index.html']").textContent = translations[language].navigation.catalogue;
 
     // About Section
     document.querySelector("#about h1").textContent = translations[language].about.heading;
