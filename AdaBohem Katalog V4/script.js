@@ -329,3 +329,15 @@ const translations = {
       "&copy; 2025 AdaBohem. <br>All Rights Reserved.<br> AdaBohem is a <a href='http://www.bahcivanlar.com.tr' target='_blank' class='bahcivanlar-link'>Bahçıvanlar Group</a> company.",
   },
 };
+
+
+function loadSpinner(){
+// Ensure all scripts are loaded before hiding the spinner
+window.onload = function() {
+  let loader = document.getElementById("loading-screen");
+  loader.style.opacity = "0";  // Smooth fade-out effect
+  setTimeout(() => {
+      loader.style.display = "none"; // Hide completely
+  }, 600); // Wait for fade-out animation
+};
+}
