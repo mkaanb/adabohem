@@ -366,12 +366,14 @@ footer {
   text-align: center;
   margin-top: 100px;
   font-size: 14px;
+  display: none;
 }
 
 .designedname {
   color: #84245c;
   font-weight: bold;
   font-size: 16px;
+  display: none;
 }
 
 /* Slide-in animation */
