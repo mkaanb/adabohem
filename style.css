@@ -489,13 +489,13 @@ footer {
 
 .designed {
   text-align: right;
-  display: hidden;
+  display: none;
 }
 
 .designedname {
   color: #84245c;
   font-weight: bold;
-  display: hidden;
+  display: none;
 }
 
 /* Full-screen overlay */
