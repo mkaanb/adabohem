@@ -1,9 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://adabohem.com/</loc>
-        <lastmod>2025-02-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.adabohem.com/</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/index.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/AdaBohem%20Katalog%20V4/cat-index.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/AdaBohem%20Katalog%20V4/hookahs.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/AdaBohem%20Katalog%20V4/bowls.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/AdaBohem%20Katalog%20V4/hmds.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/AdaBohem%20Katalog%20V4/hoses.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/AdaBohem%20Katalog%20V4/others.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/AdaBohem%20Katalog%20V4/smyrna.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/AdaBohem%20Katalog%20V4/smogmoon.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/AdaBohem%20Katalog%20V4/alfakher.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.adabohem.com/AdaBohem%20Katalog%20V4/jibiar.html</loc>
+  <lastmod>2025-03-21T10:41:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
