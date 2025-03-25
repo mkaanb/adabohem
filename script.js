@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
         products: "Products & Services",
         portfolio: "Portfolio",
         contact: "Contact",
-        catalogue: "Catalogue"
+        catalogue: "Catalog"
       },
       about: {
         heading: "About Us",
