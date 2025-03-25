@@ -41,7 +41,6 @@ header {
 
 .hamb {
   height: 40px;
-  width: 100%;
   object-fit: cover;
 }
 
@@ -297,6 +296,7 @@ nav ul li a:hover {
   border-radius: 8px;
   display: inline-block;
   margin-top: -10px;
+  margin-bottom: 4vh;
 }
 
 .in-stock {
