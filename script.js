@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("nav a[href='#products']").textContent = translations[language].navigation.products;
     document.querySelector("nav a[href='#portfolio']").textContent = translations[language].navigation.portfolio;
     document.querySelector("nav a[href='#contact']").textContent = translations[language].navigation.contact;
-    document.querySelector("nav a[href='AdaBohem Katalog V4/cat-index.html']").textContent = translations[language].navigation.catalogue;
+    document.querySelector("nav a[href='https://catalog.adabohem.com']").textContent = translations[language].navigation.catalogue;
 
     // About Section
     document.querySelector("#about h1").textContent = translations[language].about.heading;
